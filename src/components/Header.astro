@@ -1,0 +1,33 @@
+---
+export interface Props {
+  name: string;
+  title: string;
+}
+
+const { name, title } = Astro.props;
+---
+
+<div class="header-wrapper">
+  <div class="header-left">
+    <p>{name}</p>
+    <p>{title}</p>
+  </div>
+  <div class="header-right">
+    <slot />
+  </div>
+</div>
+<style>
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .header-left {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-right {
+    display: flex;
+    flex-direction: row;
+  }
+</style>
