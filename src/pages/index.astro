@@ -2,12 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
+import SiteLink from "../components/SiteLink.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout title="Hana Um">
 	<Header slot="header" name="Hana Um" title="Software Engineer">
-		<p>github</p>
-		<p>linkedin</p>
+		<SiteLink linkUrl="github"/>
+		<SiteLink linkUrl="linkedin"/>
 	</Header>
 	<main slot="body">
 		<h1>Coming soon</h1>
@@ -16,4 +18,5 @@ import Header from "../components/Header.astro";
 			<Card href="https://old.hanaum.com/" title="Old site" />
 		</ul>
 	</main>
+	<AboutMe slot="aboutMe" />
 </Layout>

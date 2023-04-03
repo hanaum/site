@@ -9,18 +9,24 @@ const { name, title } = Astro.props;
 
 <div class="header-wrapper">
   <div class="header-left">
-    <p>{name}</p>
-    <p>{title}</p>
+    <p class="header-name">{name}</p>
+    <p class="header-title">{title}</p>
   </div>
   <div class="header-right">
     <slot />
   </div>
 </div>
 <style>
+  p {
+    margin: 8px;
+  }
   .header-wrapper {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    align-items: center;
+    background-color: tan;
+    padding: 10px 20px;
   }
   .header-left {
     display: flex;
@@ -29,5 +35,11 @@ const { name, title } = Astro.props;
   .header-right {
     display: flex;
     flex-direction: row;
+  }
+  .header-name {
+    font-size: 40px;
+  }
+  .header-title {
+    font-size: 20px;
   }
 </style>
