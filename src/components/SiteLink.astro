@@ -1,8 +1,19 @@
 ---
 export interface Props {
   linkUrl: string;
+  iconType: string;
+  altDescription: string;
 }
 
-const { linkUrl } = Astro.props;
+const { linkUrl, altDescription, iconType } = Astro.props;
 ---
-<p>{linkUrl}</p>
+
+<div class="icon-container">
+  <a href={linkUrl}><img src={iconType} alt={altDescription} width="40" height="40" /></a>
+</div>
+
+<style>
+  .icon-container {
+    margin-left: 20px;
+  }
+</style>

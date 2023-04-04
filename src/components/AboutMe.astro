@@ -1,11 +1,47 @@
-<div class="header-wrapper">
-  <h1>About me</h1>
-  <p>Grew up in Queens, NYC. Moved to the Bay Area. Now currently residing in Seattle, WA wondering where my next adventures will take me!</p>
-  <p>When I'm not working on projects, you can find me restaurant hopping, playing video games, traveling, or escaping into nature.</p>
+<div class="aboutme-wrapper">
+  <img src="pudding.jpg" alt="aboutme" class="img-wrapper" />
+  <div class="aboutme-description">
+    <h1>About me</h1>
+    <p>
+      Grew up in Queens, NYC. Moved to the Bay Area. Now currently residing in
+      Seattle, WA wondering where my next adventures will take me!
+    </p>
+    <p>
+      When I'm not working on projects, you can find me restaurant hopping,
+      playing video games, traveling, or escaping into nature.
+    </p>
+  </div>
 </div>
+
 <style>
-  .header-wrapper {
-    background-color: tan;
-    padding: 10px 20px;
+  .aboutme-wrapper {
+    background-color: rgb(180, 163, 142);
+    padding: 40px 20px;
+    display: flex;
+    align-self: center;
+  }
+
+  .img-wrapper {
+    border-radius: 10px;
+    max-width: 400px;
+    max-height: 500px;
+  }
+
+  .aboutme-description {
+    padding: 24px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .aboutme-wrapper {
+      background-color: rgb(180, 163, 142);
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .img-wrapper {
+    align-self: center;
+    max-width: 300px;
+    max-height: 450px;
+  }
   }
 </style>
